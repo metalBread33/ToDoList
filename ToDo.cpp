@@ -15,4 +15,9 @@ ToDo::ToDo (std::string date, std::string name)
 	Completed = false;
 }
 
+void ToDo::changeCompletion()
+{
+	Completed = !Completed;
+}
+
 
