@@ -2,6 +2,31 @@
 #include "ToDo.h"
 #include <cctype>
 
+void create (std::vector<ToDo>& list);
+void read (std::vector<ToDo>& list);
+void update (std::vector<ToDo>& list);
+void remove (std::vector<ToDo>& list);	//forgot delete is a keyword lol
+
+void create (std::vector<ToDo>& list)
+{
+	std::cout << "Create" << std::endl;
+}
+
+void read  (std::vector<ToDo>& list)
+{
+	std::cout << "Read" << std::endl;
+}
+
+void update (std::vector<ToDo>& list)
+{
+	std::cout << "Update" << std::endl;
+}
+
+void remove (std::vector<ToDo>& list)
+{
+	std::cout << "Remove" << std::endl;
+}
+
 int main()
 {
 	std::vector<ToDo> ToDoList;
@@ -19,13 +44,13 @@ int main()
 		if (input == 'q')
 			quit = true;
 		else if (input == 'c')
-			std::cout << "Create" << std::endl;
+			create(ToDoList);
 		else if (input == 'r')
-			std::cout << "Read" << std::endl;
+			read(ToDoList);
 		else if (input == 'u')
-			std::cout << "Update" << std::endl;
+			update(ToDoList);
 		else if (input == 'd')
-			std::cout << "Delete" << std::endl;
+			remove(ToDoList);
 		else 
 			std::cout << "Invalid. Please try again" << std::endl; 
 	} while (!quit);
