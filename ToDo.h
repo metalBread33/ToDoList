@@ -20,7 +20,7 @@ private:
 	std::vector<ToDo> Steps;
 	bool Completed;
 	std::string Name;
-	
+	enum priority {none, low, mid, high, very_high};	
 
 
 };
